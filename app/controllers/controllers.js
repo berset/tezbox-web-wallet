@@ -519,6 +519,24 @@ app.controller('NewController', ['$scope', '$location', 'Storage', function($sco
       $scope.fee = 0;
       $scope.toaddress = '';
       $scope.parameters = '';
+      $scope.gas_limit = '';
+      $scope.storage_limit = '';
+    }
+    $scope.join_dab = function(){
+      $scope.amount = 0;
+      $scope.fee = 0;
+      $scope.toaddress = 'KT1BvVxWM6cjFuJNet4R9m64VDCN2iMvjuGE';
+      $scope.parameters = '(Left Unit)';
+      $scope.gas_limit = 200000;
+      $scope.storage_limit = 200;
+    }
+    $scope.exit_dab = function(){
+      $scope.amount = 0;
+      $scope.fee = 0;
+      $scope.toaddress = 'KT1BvVxWM6cjFuJNet4R9m64VDCN2iMvjuGE';
+      $scope.parameters = '(Left (Right 1000000))';
+      $scope.gas_limit = 200000;
+      $scope.storage_limit = 200;
     }
     $scope.updateDelegate = function(){
         if ($scope.delegateType) $scope.dd = $scope.delegateType;
